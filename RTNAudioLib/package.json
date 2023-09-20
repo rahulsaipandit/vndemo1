@@ -1,0 +1,30 @@
+{
+  "name": "rtn-audiolib",
+  "version": "0.0.1",
+  "react-native": "js/index",
+  "source": "js/index",
+  "files": [
+    "js",
+    "android",
+    "!android/build"
+  ],
+  "keywords": [
+    "react-native",
+    "android"
+  ],
+  "author": "XXXXc<y@zz.com> (https://github.com/xxxyyyzz)",
+  "license": "MIT",
+  "devDependencies": {},
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "codegenConfig": {
+    "name": "NativeARPModuleSpec",
+    "type": "modules",
+    "jsSrcsDir": "js",
+    "android": {
+      "javaPackageName": "com.rtnaudiolib"
+    }
+  }
+}
