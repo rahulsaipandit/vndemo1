@@ -46,13 +46,13 @@ NativeARPModuleSpec(reactContext), PermissionListener {
                 if (Build.VERSION.SDK_INT < 29 &&
                         (ActivityCompat.checkSelfPermission(reactContext, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED ||
                         ActivityCompat.checkSelfPermission(reactContext, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED))  {
-                    ActivityCompat.requestPermissions((currentActivity)!!, arrayOf(
+                    ActivityCompat.requestPermissions((reactContext.currentActivity)!!, arrayOf(
                             Manifest.permission.RECORD_AUDIO,
                             Manifest.permission.WRITE_EXTERNAL_STORAGE), 0)
                     promise.reject("No permission granted.", "Try again after adding permission.")
                     return
                 } else if (ActivityCompat.checkSelfPermission(reactContext, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions((currentActivity)!!, arrayOf(Manifest.permission.RECORD_AUDIO), 0)
+                    ActivityCompat.requestPermissions((reactContext.currentActivity)!!, arrayOf(Manifest.permission.RECORD_AUDIO), 0)
                     promise.reject("No permission granted.", "Try again after adding permission.")
                     return
                 }

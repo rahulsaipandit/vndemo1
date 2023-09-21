@@ -1,4 +1,4 @@
-import RTNAudioRecorderPlayer from 'rtn-audiolib/js/NativeARPModule';
+//import RTNAudioRecorderPlayer from 'rtn-audiolib/js/NativeARPModule';
 
 import AudioRecorderPlayer, {
   AVEncoderAudioQualityIOSType,
@@ -152,109 +152,109 @@ class Page extends Component<any, State> {
 
   public render(): ReactElement {
     let playWidth =
-      (this.state.currentPositionSec / this.state.currentDurationSec) *
-      (screenWidth - 56);
+        (this.state.currentPositionSec / this.state.currentDurationSec) *
+        (screenWidth - 56);
 
     if (!playWidth) {
       playWidth = 0;
     }
 
     return (
-      <SafeAreaView style={styles.container}>
-        <Text style={styles.titleTxt}>Audio Recorder Player</Text>
-        <Text style={styles.txtRecordCounter}>{this.state.recordTime}</Text>
-        <View style={styles.viewRecorder}>
-          <View style={styles.recordBtnWrapper}>
-            <Button
-              style={styles.btn}
-              onPress={this.onStartRecord}
-              textStyle={styles.txt}>
-              Record
-            </Button>
-            <Button
-              style={[
-                styles.btn,
-                {
-                  marginLeft: 12,
-                },
-              ]}
-              onPress={this.onPauseRecord}
-              textStyle={styles.txt}>
-              Pause
-            </Button>
-            <Button
-              style={[
-                styles.btn,
-                {
-                  marginLeft: 12,
-                },
-              ]}
-              onPress={this.onResumeRecord}
-              textStyle={styles.txt}>
-              Resume
-            </Button>
-            <Button
-              style={[styles.btn, {marginLeft: 12}]}
-              onPress={this.onStopRecord}
-              textStyle={styles.txt}>
-              Stop
-            </Button>
-          </View>
-        </View>
-        <View style={styles.viewPlayer}>
-          <TouchableOpacity
-            style={styles.viewBarWrapper}
-            onPress={this.onStatusPress}>
-            <View style={styles.viewBar}>
-              <View style={[styles.viewBarPlay, {width: playWidth}]} />
+        <SafeAreaView style={styles.container}>
+          <Text style={styles.titleTxt}>Audio Recorder Player</Text>
+          <Text style={styles.txtRecordCounter}>{this.state.recordTime}</Text>
+          <View style={styles.viewRecorder}>
+            <View style={styles.recordBtnWrapper}>
+              <Button
+                  style={styles.btn}
+                  onPress={this.onStartRecord}
+                  textStyle={styles.txt}>
+                Record
+              </Button>
+              <Button
+                  style={[
+                    styles.btn,
+                    {
+                      marginLeft: 12,
+                    },
+                  ]}
+                  onPress={this.onPauseRecord}
+                  textStyle={styles.txt}>
+                Pause
+              </Button>
+              <Button
+                  style={[
+                    styles.btn,
+                    {
+                      marginLeft: 12,
+                    },
+                  ]}
+                  onPress={this.onResumeRecord}
+                  textStyle={styles.txt}>
+                Resume
+              </Button>
+              <Button
+                  style={[styles.btn, {marginLeft: 12}]}
+                  onPress={this.onStopRecord}
+                  textStyle={styles.txt}>
+                Stop
+              </Button>
             </View>
-          </TouchableOpacity>
-          <Text style={styles.txtCounter}>
-            {this.state.playTime} / {this.state.duration}
-          </Text>
-          <View style={styles.playBtnWrapper}>
-            <Button
-              style={styles.btn}
-              onPress={this.onStartPlay}
-              textStyle={styles.txt}>
-              Play
-            </Button>
-            <Button
-              style={[
-                styles.btn,
-                {
-                  marginLeft: 12,
-                },
-              ]}
-              onPress={this.onPausePlay}
-              textStyle={styles.txt}>
-              Pause
-            </Button>
-            <Button
-              style={[
-                styles.btn,
-                {
-                  marginLeft: 12,
-                },
-              ]}
-              onPress={this.onResumePlay}
-              textStyle={styles.txt}>
-              Resume
-            </Button>
-            <Button
-              style={[
-                styles.btn,
-                {
-                  marginLeft: 12,
-                },
-              ]}
-              onPress={this.onStopPlay}
-              textStyle={styles.txt}>
-              Stop
-            </Button>
           </View>
-        </View>
-      </SafeAreaView>
+          <View style={styles.viewPlayer}>
+            <TouchableOpacity
+                style={styles.viewBarWrapper}
+                onPress={this.onStatusPress}>
+              <View style={styles.viewBar}>
+                <View style={[styles.viewBarPlay, {width: playWidth}]} />
+              </View>
+            </TouchableOpacity>
+            <Text style={styles.txtCounter}>
+              {this.state.playTime} / {this.state.duration}
+            </Text>
+            <View style={styles.playBtnWrapper}>
+              <Button
+                  style={styles.btn}
+                  onPress={this.onStartPlay}
+                  textStyle={styles.txt}>
+                Play
+              </Button>
+              <Button
+                  style={[
+                    styles.btn,
+                    {
+                      marginLeft: 12,
+                    },
+                  ]}
+                  onPress={this.onPausePlay}
+                  textStyle={styles.txt}>
+                Pause
+              </Button>
+              <Button
+                  style={[
+                    styles.btn,
+                    {
+                      marginLeft: 12,
+                    },
+                  ]}
+                  onPress={this.onResumePlay}
+                  textStyle={styles.txt}>
+                Resume
+              </Button>
+              <Button
+                  style={[
+                    styles.btn,
+                    {
+                      marginLeft: 12,
+                    },
+                  ]}
+                  onPress={this.onStopPlay}
+                  textStyle={styles.txt}>
+                Stop
+              </Button>
+            </View>
+          </View>
+        </SafeAreaView>
     );
   }
 
@@ -263,8 +263,8 @@ class Page extends Component<any, State> {
     console.log(`touchX: ${touchX}`);
 
     const playWidth =
-      (this.state.currentPositionSec / this.state.currentDurationSec) *
-      (screenWidth - 56);
+        (this.state.currentPositionSec / this.state.currentDurationSec) *
+        (screenWidth - 56);
     console.log(`currentPlayWidth: ${playWidth}`);
 
     const currentPosition = Math.round(this.state.currentPositionSec);
@@ -292,11 +292,11 @@ class Page extends Component<any, State> {
         console.log('write external stroage', grants);
 
         if (
-          grants['android.permission.WRITE_EXTERNAL_STORAGE'] ===
+            grants['android.permission.WRITE_EXTERNAL_STORAGE'] ===
             PermissionsAndroid.RESULTS.GRANTED &&
-          grants['android.permission.READ_EXTERNAL_STORAGE'] ===
+            grants['android.permission.READ_EXTERNAL_STORAGE'] ===
             PermissionsAndroid.RESULTS.GRANTED &&
-          grants['android.permission.RECORD_AUDIO'] ===
+            grants['android.permission.RECORD_AUDIO'] ===
             PermissionsAndroid.RESULTS.GRANTED
         ) {
           console.log('permissions granted');
@@ -320,20 +320,20 @@ class Page extends Component<any, State> {
       AVFormatIDKeyIOS: AVEncodingOption.aac,
       OutputFormatAndroid: OutputFormatAndroidType.AAC_ADTS,
     };
-  //   const audioSet = RTNAudioRecorderPlayer.AudioSetOptions(
-  //     AudioEncoderAndroid = AudioEncoderAndroidType.AAC,
-  //     AudioSourceAndroid = AudioSourceAndroidType.MIC,
-  //     AVEncoderAudioQualityKeyIOS = AVEncoderAudioQualityIOSType.high,
-  //     AVNumberOfChannelsKeyIOS = 2,
-  //     AVFormatIDKeyIOS = AVEncodingOption.aac,
-  //     OutputFormatAndroid = OutputFormatAndroidType.AAC_ADTS
-  // )
+    //   const audioSet = RTNAudioRecorderPlayer.AudioSetOptions(
+    //     AudioEncoderAndroid = AudioEncoderAndroidType.AAC,
+    //     AudioSourceAndroid = AudioSourceAndroidType.MIC,
+    //     AVEncoderAudioQualityKeyIOS = AVEncoderAudioQualityIOSType.high,
+    //     AVNumberOfChannelsKeyIOS = 2,
+    //     AVFormatIDKeyIOS = AVEncodingOption.aac,
+    //     OutputFormatAndroid = OutputFormatAndroidType.AAC_ADTS
+    // )
 
     console.log('audioSet', audioSet);
 
     const uri = await this.audioRecorderPlayer.startRecorder(
-      this.path,
-      audioSet,
+        this.path,
+        audioSet,
     );
 
     this.audioRecorderPlayer.addRecordBackListener((e: RecordBackType) => {
@@ -341,7 +341,7 @@ class Page extends Component<any, State> {
       this.setState({
         recordSecs: e.currentPosition,
         recordTime: this.audioRecorderPlayer.mmssss(
-          Math.floor(e.currentPosition),
+            Math.floor(e.currentPosition),
         ),
       });
     });
@@ -387,7 +387,7 @@ class Page extends Component<any, State> {
           currentPositionSec: e.currentPosition,
           currentDurationSec: e.duration,
           playTime: this.audioRecorderPlayer.mmssss(
-            Math.floor(e.currentPosition),
+              Math.floor(e.currentPosition),
           ),
           duration: this.audioRecorderPlayer.mmssss(Math.floor(e.duration)),
         });

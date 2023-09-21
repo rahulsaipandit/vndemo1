@@ -1,0 +1,229 @@
+{
+  "modules": {
+    "NativeARPModule": {
+      "type": "NativeModule",
+      "aliasMap": {},
+      "enumMap": {},
+      "spec": {
+        "properties": [
+          {
+            "name": "startRecorder",
+            "optional": false,
+            "typeAnnotation": {
+              "type": "FunctionTypeAnnotation",
+              "returnTypeAnnotation": {
+                "type": "PromiseTypeAnnotation",
+                "elementType": {
+                  "type": "StringTypeAnnotation"
+                }
+              },
+              "params": [
+                {
+                  "name": "path",
+                  "optional": false,
+                  "typeAnnotation": {
+                    "type": "StringTypeAnnotation"
+                  }
+                },
+                {
+                  "name": "audioSet",
+                  "optional": false,
+                  "typeAnnotation": {
+                    "type": "GenericObjectTypeAnnotation"
+                  }
+                },
+                {
+                  "name": "meteringEnabled",
+                  "optional": false,
+                  "typeAnnotation": {
+                    "type": "BooleanTypeAnnotation"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "resumeRecorder",
+            "optional": false,
+            "typeAnnotation": {
+              "type": "FunctionTypeAnnotation",
+              "returnTypeAnnotation": {
+                "type": "PromiseTypeAnnotation",
+                "elementType": {
+                  "type": "StringTypeAnnotation"
+                }
+              },
+              "params": []
+            }
+          },
+          {
+            "name": "pauseRecorder",
+            "optional": false,
+            "typeAnnotation": {
+              "type": "FunctionTypeAnnotation",
+              "returnTypeAnnotation": {
+                "type": "PromiseTypeAnnotation",
+                "elementType": {
+                  "type": "StringTypeAnnotation"
+                }
+              },
+              "params": []
+            }
+          },
+          {
+            "name": "stopRecorder",
+            "optional": false,
+            "typeAnnotation": {
+              "type": "FunctionTypeAnnotation",
+              "returnTypeAnnotation": {
+                "type": "PromiseTypeAnnotation",
+                "elementType": {
+                  "type": "StringTypeAnnotation"
+                }
+              },
+              "params": []
+            }
+          },
+          {
+            "name": "setVolume",
+            "optional": false,
+            "typeAnnotation": {
+              "type": "FunctionTypeAnnotation",
+              "returnTypeAnnotation": {
+                "type": "PromiseTypeAnnotation",
+                "elementType": {
+                  "type": "StringTypeAnnotation"
+                }
+              },
+              "params": [
+                {
+                  "name": "volume",
+                  "optional": false,
+                  "typeAnnotation": {
+                    "type": "DoubleTypeAnnotation"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "startPlayer",
+            "optional": false,
+            "typeAnnotation": {
+              "type": "FunctionTypeAnnotation",
+              "returnTypeAnnotation": {
+                "type": "PromiseTypeAnnotation",
+                "elementType": {
+                  "type": "StringTypeAnnotation"
+                }
+              },
+              "params": [
+                {
+                  "name": "path",
+                  "optional": false,
+                  "typeAnnotation": {
+                    "type": "StringTypeAnnotation"
+                  }
+                },
+                {
+                  "name": "httpHeaders",
+                  "optional": false,
+                  "typeAnnotation": {
+                    "type": "GenericObjectTypeAnnotation"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "resumePlayer",
+            "optional": false,
+            "typeAnnotation": {
+              "type": "FunctionTypeAnnotation",
+              "returnTypeAnnotation": {
+                "type": "PromiseTypeAnnotation",
+                "elementType": {
+                  "type": "StringTypeAnnotation"
+                }
+              },
+              "params": []
+            }
+          },
+          {
+            "name": "pausePlayer",
+            "optional": false,
+            "typeAnnotation": {
+              "type": "FunctionTypeAnnotation",
+              "returnTypeAnnotation": {
+                "type": "PromiseTypeAnnotation",
+                "elementType": {
+                  "type": "StringTypeAnnotation"
+                }
+              },
+              "params": []
+            }
+          },
+          {
+            "name": "seekToPlayer",
+            "optional": false,
+            "typeAnnotation": {
+              "type": "FunctionTypeAnnotation",
+              "returnTypeAnnotation": {
+                "type": "PromiseTypeAnnotation",
+                "elementType": {
+                  "type": "StringTypeAnnotation"
+                }
+              },
+              "params": [
+                {
+                  "name": "time",
+                  "optional": false,
+                  "typeAnnotation": {
+                    "type": "DoubleTypeAnnotation"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "stopPlayer",
+            "optional": false,
+            "typeAnnotation": {
+              "type": "FunctionTypeAnnotation",
+              "returnTypeAnnotation": {
+                "type": "PromiseTypeAnnotation",
+                "elementType": {
+                  "type": "StringTypeAnnotation"
+                }
+              },
+              "params": []
+            }
+          },
+          {
+            "name": "setSubscriptionDuration",
+            "optional": false,
+            "typeAnnotation": {
+              "type": "FunctionTypeAnnotation",
+              "returnTypeAnnotation": {
+                "type": "PromiseTypeAnnotation",
+                "elementType": {
+                  "type": "StringTypeAnnotation"
+                }
+              },
+              "params": [
+                {
+                  "name": "sec",
+                  "optional": false,
+                  "typeAnnotation": {
+                    "type": "DoubleTypeAnnotation"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "moduleName": "NativeARPModule"
+    }
+  }
+}
